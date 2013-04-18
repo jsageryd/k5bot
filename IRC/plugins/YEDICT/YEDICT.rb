@@ -41,7 +41,7 @@ class YEDICT < IRCPlugin
     when :cn
       word = msg.tail
       return unless word
-      yedict_lookup = lookup(word, [@hash_yedict[:cantonese], @hash_yedict[:jyutping]])
+      yedict_lookup = lookup(word, [@hash_yedict[:cantonese], @hash_yedict[:mandarin], @hash_yedict[:jyutping]])
       reply_with_menu(msg, generate_menu(format_description_unambiguous(yedict_lookup), "\"#{word}\" in YEDICT"))
     end
   end

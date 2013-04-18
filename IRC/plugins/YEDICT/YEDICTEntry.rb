@@ -13,6 +13,7 @@ class YEDICTEntry
   def initialize(raw)
     @raw = raw
     @cantonese = nil
+    @mandarin = nil
     @jyutping = nil
     @simple_entry = nil
     @english = nil
@@ -25,6 +26,12 @@ class YEDICTEntry
     return @cantonese if @cantonese
     cantonese = @raw[/^([^\s]*)\s*[\s]+\s*[^\[]+\[[^\]]+[^\/]+.*/, 1]
     @cantonese = cantonese && cantonese.strip
+  end
+  
+  def mandarin
+    return @mandarin if @mandarin
+    mandarin = @raw[/^[^\s]*\s*[\s]+\s*([^\[]+)\[[^\]]+[^\/]+.*/, 1]
+    @mandarin = mandarin && mandarin.strip
   end
 
   def jyutping
@@ -69,6 +76,7 @@ class YEDICTEntry
 
   def marshal_load(data)
     @cantonese = nil
+    @mandarin = nil
     @jyutping = nil
     @english = nil
     @info = nil
