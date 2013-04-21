@@ -77,7 +77,7 @@ and ISO-3166 country names (e.g. US, JP)",
   def on_privmsg(msg)
     case msg.botcommand
     when :time
-      zones = (msg.tail || 'UTC JST').split
+      zones = (msg.tail || 'UTC shanghai').split
       time = Time.now
       msg.reply "#{time(time, zones)}"
     when :jtime
