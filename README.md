@@ -1,7 +1,7 @@
-K5 bot
+Yakusha
 ================================
 
-This is an IRC bot implemented in Ruby.
+This is an IRC bot based on [K5](https://github.com/k5bot/k5bot)
 
 Usage
 --------------------------------
@@ -24,9 +24,13 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-Copyright and contact
+Copyright and contact Yakusha
 --------------------------------
-Copyright (C) 2011-2013 Johan Sageryd <j@1616.se>  
-Copyright (C) 2012 James Kay <twey@twey.co.uk>  
-Copyright (C) 2012-2013 Alexander Belykh <albel727@ngs.ru>  
+Copyright (C) 2013 三泉植豆
+
+Copyright and contact K5 bot
+--------------------------------
+Copyright (C) 2011-2013 Johan Sageryd <j@1616.se>
+Copyright (C) 2012 James Kay <twey@twey.co.uk>
+Copyright (C) 2012-2013 Alexander Belykh <albel727@ngs.ru>
 Copyright (C) 2012-2013 三泉植豆
