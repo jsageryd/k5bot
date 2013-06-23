@@ -11,7 +11,7 @@ class CEDICT < IRCPlugin
   Description = 'A CEDICT plugin.'
   Commands = {
     :zh => 'looks up a Mandarin word in CEDICT',
-    :zhen => 'looks up an English word in CEDICT',
+    :en => 'looks up an English word in CEDICT',
   }
   Dependencies = [ :Language, :Menu ]
 
@@ -43,7 +43,7 @@ class CEDICT < IRCPlugin
       return unless word
       cedict_lookup = lookup(word, [@hash_cedict[:mandarin_zh], @hash_cedict[:mandarin_tw], @hash_cedict[:pinyin]])
       reply_with_menu(msg, generate_menu(format_description_unambiguous(cedict_lookup), "\"#{word}\" in CEDICT"))
-    when :zhen
+    when :en
       word = msg.tail
       return unless word
       edict_lookup = keyword_lookup(split_into_keywords(word), @hash_cedict[:keywords])
