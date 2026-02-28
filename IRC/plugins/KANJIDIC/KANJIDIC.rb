@@ -57,7 +57,7 @@ class KANJIDIC
       end
     when :kl
       count = for_each_kanji(msg.tail) do |entry|
-        msg.reply("Info on #{entry.kanji}: " + URI.escape("http://jisho.org/kanji/details/#{entry.kanji}"))
+        msg.reply("Info on #{entry.kanji}: http://jisho.org/kanji/details/#{entry.kanji}")
       end
       msg.reply(not_found_msg(msg.tail)) if count <= 0
     end

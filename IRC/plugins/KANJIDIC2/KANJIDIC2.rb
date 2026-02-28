@@ -118,7 +118,7 @@ if it's the only given search term",
       search_result = extract_known_kanji(msg.tail, MAX_RESULTS_COUNT)
       if search_result
         search_result.each do |entry|
-          msg.reply("Info on #{entry.kanji}: " + URI.escape("http://jisho.org/kanji/details/#{entry.kanji}"))
+          msg.reply("Info on #{entry.kanji}: http://jisho.org/kanji/details/#{entry.kanji}")
         end
       else
         msg.reply(not_found_msg(msg.tail))
